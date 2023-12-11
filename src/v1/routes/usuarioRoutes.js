@@ -5,9 +5,11 @@ const usuarioController = require("../../controllers/usuarioController");
 router
     .get('/', usuarioController.getAllUsuarios)
     .get("/:usuarioId", usuarioController.getOneUsuario)
+    .get("/:usuarioId", usuarioController.getViviendas)
+    .get("/:usuarioId", usuarioController.getviviendasFiltradas)
     .post("/:usuarioId", usuarioController.createNewUsuario)
     .patch("/:usuarioId", usuarioController.updateNombreUsuario)
-    .patch("/:usuarioId", usuarioController.updateTodoUsuario)
+    .put("/:usuarioId", usuarioController.updateTodoUsuario)
     .patch("/:usuarioId", usuarioController.updateViviendaUsuario)
     .delete("/:usuarioId", usuarioController.deleteUsuario);
 

@@ -8,6 +8,14 @@ const getOneUsuario = (req, res) => {
     const Usuario = usuarioService.getOneUsuario(req.params.usuarioId);
     res.send("Get Usuario " + req.params.usuarioId);
 };
+const getViviendas = (req, res) => {
+    const Viviendas = usuarioService.getViviendas(req.params.usuarioId);
+    res.send("Get Viviendas " + req.params.usuarioId);
+};
+const getviviendasFiltradas = (req, res) => {
+    const Viviendas = usuarioService.getViviendasFiltradas(req.params.usuarioId && (req.params.ciudad || req.params.calle || req.params.pais));
+    res.send("Get Viviendas Filtradas " + req.params.usuarioId && (req.params.ciudad || req.params.calle || req.params.pais));
+};
 const createNewUsuario = (req, res) => {
     const createdUsuario = usuarioService.createNewUsuario(req.params.usuarioId);
     res.send("Create Usuario " + req.params.usuarioId);
@@ -32,6 +40,8 @@ const deleteUsuario = (req, res) => {
 module.exports = {
     getAllUsuarios,
     getOneUsuario,
+    getViviendas,
+    getviviendasFiltradas,
     createNewUsuario,
     updateNombreUsuario,
     updateTodoUsuario,

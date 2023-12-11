@@ -6,6 +6,15 @@ const getAllUsuarios = () => {
 };
 const getOneUsuario = () => {
     return;
+    
+};
+const getViviendas = () => {
+    return;
+    
+};
+const getviviendasFiltradas = () => {
+    return;
+    
 };
 const createNewUsuario = () => {
     return;
@@ -26,6 +35,8 @@ const deleteUsuario = () => {
 module.exports = {
     getAllUsuarios,
     getOneUsuario,
+    getViviendas,
+    getviviendasFiltradas,
     createNewUsuario,
     updateNombreUsuario,
     updateTodoUsuario,
